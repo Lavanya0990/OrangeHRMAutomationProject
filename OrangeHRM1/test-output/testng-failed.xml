@@ -5,8 +5,13 @@
     <classes>
       <class name="TestScenerio.TestMethods_Login">
         <methods>
-          <include name="AddEmployeeInfo_TC22"/>
+          <include name="verifyEmployeeInfo_TC12"/>
+          <include name="verifyEmployeeInfo_TC9"/>
           <include name="beforeTest"/>
+          <include name="verifyEmployeeInfo_TC8"/>
+          <include name="verifyEmployeeInfo_TC11"/>
+          <include name="verifyEmployeeInfo_TC10"/>
+          <include name="verifyLogin_TC6"/>
         </methods>
       </class> <!-- TestScenerio.TestMethods_Login -->
     </classes>

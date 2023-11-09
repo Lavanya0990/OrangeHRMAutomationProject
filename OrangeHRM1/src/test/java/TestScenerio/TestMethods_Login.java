@@ -31,10 +31,13 @@ public class TestMethods_Login {
 		driver.get("https://opensource-demo.orangehrmlive.com/web/index.php/auth/login");
 	    
 		loginPage=new LoginPage(driver);
-		employeeInfoPage=new EmployeeInformationPage(driver);
+		employeeInfoPage=new EmployeeInformationPage(driver); 
 		addEmployeesPage=new AddEmployeespage(driver);
+		System.out.println("TestMethods_Login beforeTest 333");
 		
 	}
+	
+	
 	
 	@Test(priority=1)
 	public void verifyLogin_TC1()
@@ -78,27 +81,21 @@ public class TestMethods_Login {
 		loginPage.Login("Admin", "admin123");
 	}
 	
-	@Test(priority=7)
-	public void verifyEmployeeInfo_TC7()
-	{
-		System.out.println("verifyEmployeeInfo_TC7");
-		employeeInfoPage.EmpInfoInputs();
-		
-	}
+
 	
 	@Test(priority=8)
 	public void verifyEmployeeInfo_TC8()
 	{
 		System.out.println("verifyEmployeeInfo_TC8");
-		employeeInfoPage.EmpInfoInputsAlert();
-		
+		employeeInfoPage.EmpInfoInputs();
+			
 	}
 	
 	@Test(priority=9)
 	public void verifyEmployeeInfo_TC9()
 	{
-		System.out.println("verifyEmployeeInfo_TC9");
-		employeeInfoPage.EmpInfoSearch();
+		System.out.println("verifyEmployeeInfo_TC9");		
+		employeeInfoPage.EmpInfoInputsAlert();
 		
 	}
 	
@@ -106,7 +103,7 @@ public class TestMethods_Login {
 	public void verifyEmployeeInfo_TC10()
 	{
 		System.out.println("verifyEmployeeInfo_TC10");
-		employeeInfoPage.EmpInfoSearchAlert();
+		employeeInfoPage.EmpInfoSearch();
 		
 	}
 	
@@ -114,7 +111,7 @@ public class TestMethods_Login {
 	public void verifyEmployeeInfo_TC11()
 	{
 		System.out.println("verifyEmployeeInfo_TC11");
-		employeeInfoPage.EmpInfoReset();
+		employeeInfoPage.EmpInfoSearchAlert();
 		
 	}
 	
@@ -122,24 +119,24 @@ public class TestMethods_Login {
 	public void verifyEmployeeInfo_TC12()
 	{
 		System.out.println("verifyEmployeeInfo_TC12");
-		employeeInfoPage.AddEmployess();
+		employeeInfoPage.EmpInfoReset();
 		
 	}
-	
 	
 	@Test(priority=13)
 	public void verifyEmployeeInfo_TC13()
 	{
 		System.out.println("verifyEmployeeInfo_TC13");
-		employeeInfoPage.Questioning();
+		employeeInfoPage.AddEmployess();
 		
 	}
+	
 	
 	@Test(priority=14)
 	public void verifyEmployeeInfo_TC14()
 	{
 		System.out.println("verifyEmployeeInfo_TC14");
-		employeeInfoPage.recordListSelection();
+		employeeInfoPage.Questioning();
 		
 	}
 	
@@ -147,24 +144,23 @@ public class TestMethods_Login {
 	public void verifyEmployeeInfo_TC15()
 	{
 		System.out.println("verifyEmployeeInfo_TC15");
-		employeeInfoPage.recordListDelete();
+		employeeInfoPage.recordListSelection();
 		
 	}
 	
 	@Test(priority=16)
 	public void verifyEmployeeInfo_TC16()
 	{
-		System.out.println("verifyEmployeeInfo_TC15");
-		employeeInfoPage.recordListCancelDeletion();
+		System.out.println("verifyEmployeeInfo_TC16");
+		employeeInfoPage.recordListDelete();
 		
 	}
-	
 	
 	@Test(priority=17)
 	public void verifyEmployeeInfo_TC17()
 	{
 		System.out.println("verifyEmployeeInfo_TC17");
-		employeeInfoPage.recordListEdit();
+		employeeInfoPage.recordListCancelDeletion();
 		
 	}
 	
@@ -173,18 +169,11 @@ public class TestMethods_Login {
 	public void verifyEmployeeInfo_TC18()
 	{
 		System.out.println("verifyEmployeeInfo_TC18");
-		employeeInfoPage.recordListSorting();
+		employeeInfoPage.recordListEdit();
 		
 	}
 	
-	
-	@Test(priority=19)
-	public void verifyEmployeeInfo_TC19()
-	{
-		System.out.println("verifyEmployeeInfo_TC19");
-		employeeInfoPage.recordListPageNumbering();
-		
-	}
+
 	
 	@Test(priority=21)
 	public void AddEmployeeInfo_TC21()
@@ -229,12 +218,12 @@ public class TestMethods_Login {
 	}
 	
 	
-//	@AfterTest
-//	public void afterTest()
-//	{
-//		System.out.println("afterTest");
-//		driver.close();
-//	}
+	@AfterTest
+	public void afterTest()
+	{
+		System.out.println("afterTest");
+		driver.close();
+	}
 	
 	
 }

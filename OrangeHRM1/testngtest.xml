@@ -3,14 +3,7 @@
 <suite name="Suite">
   <test thread-count="5" name="Test">
     <classes>
-       <class name="TestScenerio.TestMethods_Login">
-		   <methods>
-			  <!-- <include name="verifyLogin_TC1"></include> --> 
-				 
-		   </methods>
-       </class>
-      
-      
+      <class name="TestScenerio.TestMethods_Login"/>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->

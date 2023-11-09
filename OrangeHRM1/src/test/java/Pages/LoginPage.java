@@ -25,22 +25,16 @@ public class LoginPage extends MainPage {
 		try
 		{
 			driver.findElement(this.userName).clear();
-			Thread.sleep(2000);
-			driver.findElement(this.userName).sendKeys(userName);	
-			Thread.sleep(2000);
-			driver.findElement(this.passWord).clear();	
-			Thread.sleep(2000);
-			driver.findElement(this.passWord).sendKeys(passWord);
-			Thread.sleep(2000);
+			driver.findElement(this.userName).sendKeys(userName);		
+			driver.findElement(this.passWord).clear();		
+			driver.findElement(this.passWord).sendKeys(passWord);	
 			driver.findElement(loginSubmitBtn).click();
-			Thread.sleep(5000);
+			
 		}
 		catch(Exception e)
 		{
 			System.out.println(e.getMessage());
-		}
-		
-		
+		}		
 		
 	}
 	
@@ -49,7 +43,6 @@ public class LoginPage extends MainPage {
 		try
 		{
 			driver.findElement(forgotPasswordLink).click();
-			Thread.sleep(2000);
 			driver.findElement(forgotPageCancelBtn).click();
 		}
 		catch(Exception e)
@@ -58,6 +51,9 @@ public class LoginPage extends MainPage {
 		}
 		
 	}
+	
+	
+	
 	
 
 }
